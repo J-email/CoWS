@@ -1,16 +1,62 @@
-# This is a sample Python script.
+# ALL DATA IN METRIC UNLESS SPECIFIED
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+8 to toggle the breakpoint.
+def elevation_to_volume(elevation):
+    volume = input("elevation: " + str(elevation) + "\n" + "volume: ")
+    return volume
 
 
+def area_to_volume(area):
+    volume = input("area: " + str(area) + "\n" + "volume: ")
+    return volume
+
+
+def volume_to_elevation(volume):
+    elevation = input("volume: " + str(volume) + "\n" + "elevation: ")
+    return elevation
+
+
+def volume_to_area(volume):
+    area = input("volume: " + str(volume) + "\n" + "area: ")
+    return area
+
+
+def elevation_to_area(elevation):
+    return volume_to_area(elevation_to_volume(elevation))
+
+
+def area_to_elevation(area):
+    return volume_to_elevation(area_to_volume(area))
+
+def population(year):
+    return 0
+
+def coloradoRiver(year):
+    return 0
+
+def lasVegasWash(year):
+    return 0
+
+def SNWA(year):
+    return 0
+
+def hooverDam(year):
+    return 0
+
+def inflow(year):
+    return 0
+
+def outflow(year):
+    return 0
+
+def evaporation(year):
+    return 0
+
+def
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    startYear = 2020
+    startVolume = 100
+    endYear = 2050
+    currentYear = startYear
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
