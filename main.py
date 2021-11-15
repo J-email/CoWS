@@ -19,13 +19,13 @@ def volume_to_elevation(volume):
 
 
 def population(year):
-    return startPopulation * (1.03 ** (year - startYear))
+    return startPopulation * (1.01 ** deltaYear)
 
 
 def coloradoRiver(year):
-    if currentYear < 2001:
-        return 12
-    return 9 * (0.97 ** (currentYear - 2001))
+    if currentYear < 2000:
+        return 9.8
+    return 9 * (0.99999 ** (currentYear - 2000))
 
 
 def lasVegasWash(year):
@@ -41,8 +41,6 @@ def SNWA(year):
 
 
 def hooverDam(year):
-    if volume_to_elevation(currentVolume) < 1000:
-        return 9
     return 9.4
 
 
@@ -55,7 +53,8 @@ def outflow(year):
 
 
 def evaporation(year):
-    return 65615.8 * volume_to_area(lastVolume) / 1000000
+    print(80/12 * volume_to_area(lastVolume) / 1000)
+    return 80/12 * volume_to_area(lastVolume) / 1000
 
 
 # Press the green button in the gutter to run the script.
@@ -83,7 +82,7 @@ if __name__ == '__main__':
             break
     plt.plot(x, y)
     plt.plot(z, u)
-    for i in range(len(x)):
-        print(str(x[i]) + " " + str(y[i]))
+    # for i in range(len(x)):
+    #    print(str(x[i]) + " " + str(y[i]))
     plt.show()
     print(model)
