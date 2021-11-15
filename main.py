@@ -23,24 +23,26 @@ def population(year):
 
 
 def coloradoRiver(year):
-    if currentYear <= 2001:
-        return 20
-    return 9 * (0.999 ** (currentYear - 2001))
+    if currentYear < 2001:
+        return 12
+    return 9 * (0.97 ** (currentYear - 2001))
 
 
 def lasVegasWash(year):
     return 0.7
 
 
-def virginRiver():
-    return
+def virginRiver(year):
+    return 0.3
 
 
 def SNWA(year):
-    return 0.45 * population(year) / 2772000
+    return 0.45 * population(year) / startPopulation
 
 
 def hooverDam(year):
+    if volume_to_elevation(currentVolume) < 1000:
+        return 9
     return 9.4
 
 
